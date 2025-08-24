@@ -1,0 +1,81 @@
+CS 255 System Design Document Template
+
+
+UML Diagrams
+
+UML Use Case Diagram
+The use case diagram for DriverPass shows how different users (actors) interact with the system. The key actors include:
+- Customer/Student: registers, logs in, schedules/cancels lessons, selects packages, takes practice tests, views progress, manages profile.
+- Secretary: enters customer records, schedules/cancels lessons for customers, generates activity reports.
+- IT Admin: manages accounts, resets passwords, blocks/unblocks users, assigns permissions, views audit logs.
+- Owner/Management: reviews reports, enables/disables packages, monitors overall system.
+- DMV System: sends updates on rules and practice test questions
+
+
+UML Activity Diagrams
+Activity Diagram 1: Schedule Lesson
+- Student logs in
+- Student chooses “Schedule Lesson.”
+- System checks driver/vehicle availability
+- Student selects date/time
+- System confirms and updates schedule
+ 
+
+Activity Diagram 2: Take Practice Test
+- Student logs in
+- Student selects “Take Practice Test”
+- System retrieves questions
+- Student completes test
+- System grades test and records score
+- Student views results
+ 
+
+UML Sequence Diagram
+Use Case: Schedule Lesson
+- Actor: Customer/Student
+- Objects: Student, DriverPass System, Schedule Database, Driver/Vehicle
+Flow:
+1. Student Requests to schedule a lesson
+2. System queries schedule database
+3. Database returns available slots
+4. Student selects a slot
+5. System confirms with driver/vehicle assignment
+6. System updates database and notifies student
+
+UML Class Diagram
+Classes and Attributes:
+- Customer: customerID, name, address, phone, email, username, password, progress
+- Account: accountID, role, status
+- Lesson: lessonID, date, time, location, status
+- Driver: driverID, name, license, availability
+- Vehicle: vehicleID, type, availability
+- Package: packageID, name, price, lessonsIncluded
+- PracticeTest: testID, date, score
+- DMVUpdate: updateID, description, effectiveDate
+- Report: reportID, type, createdBy, date
+ 
+Technical Requirements
+Hardware:
+- Cloud-hosted server infrastructure to handle web traffic
+- Secure storage with backup redundancy
+- Devices: desktops/laptops for staff, mobile and desktop access for customers
+
+Software:
+- Web application framework (Java backend with Spring or equivalent)
+- Database (MySQL/PostgreSQL)
+- Secure authentication system
+- Browser support for Chrome, Edge, Firefox, Safari
+
+Infrastructure:
+- High-speed internet with load balancing for scalability
+- Automated nightly database backups
+- Encrypted data transmission
+
+Tools:
+- UML diagrams created with lucidchart
+- GitHub for version control
+- Jira or Trello for project management
+- Testing tools
+
+Summary:
+This system design document outlines the DriverPass system, including UML diagrams that show user interactions, activity flows, sequences, and class structures. The technical requirements ensure DriverPass will be secure, scalable, and user-friendly for students, staff, and management while maintaining compliance with DMV updates.
