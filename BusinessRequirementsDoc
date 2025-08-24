@@ -1,0 +1,102 @@
+Business Requirements Document – DriverPass
+System Components and Design
+
+Purpose
+- Client: DriverPass (Owner: Liam, IT Officer: Ian)
+- Purpose: Design a web-based system that provides students with access to online practice exams and on-the-road training scheduling to improve their chances of passing their driving test.
+- The system must allow access to data from any computer or mobile device, support reservations for lessons, track training progress, and stay updated with DMV requirements.
+
+System Background
+- DriverPass identified a market gap in comprehensive driver training – more than 65% of students fail because they only study past exams.
+- Goal: Offer both online study tools and in-person/on-road lessons.
+- Need a centralized, secure, cloud-based platform for lesson scheduling, account management, online testing, and integration with DMV updates.
+- Components:
+   - Online class and practice test system
+   - Lesson scheduling/reservation system
+   - Role-based account management for employees and customers
+   - DMV connection for policy updates
+   - Reporting and activity tracking features
+
+Objectives and Goals
+- Provide online classes and practice tests with progress tracking
+- Allow customers to make, cancel, and modify reservations online or through staff.
+- Track lesson assignments with drivers, cars, times, and package details.
+- Maintain flexible package management (enable/disable packages)
+- Generate activity and performance reports for management
+- Enable technician/IT admin roles for account resets, access control, and security
+- Ensure compliance with DMV updates and notify users of changes
+
+Requirements
+Nonfunctional Requirements
+
+Performance Requirements
+- Web-based, cloud-hosted environment accessible from browsers on desktop and mobile devices.
+- High availability with minimal downtime.
+- Fast response time for page loads and data retrieval
+- System updates and DMV rule updates should be processed immediately upon release.
+
+Platform Constraints
+- Compatible with Windows, macOS, Linux, Android, and iOS
+- Backend requires a secure database system to store user data, lessons, and test results
+- Cloud hosting to handle backup and security automatically
+
+Accuracy and Precision
+- Unique login-credentials for each user; role-based access
+- Input validation for all forms (case-sensitive passwords, proper formatting)
+- System alerts admins to failed login attempts, canceled lessons, or system errors
+
+Adaptability
+- Admins can add, remove, or disable training packages without code changes
+- Flexible scheduling system for lessons, drivers, and vehicles
+- IT admin can manage user roles, reset passwords, and block/unblock accounts
+- Compatible with future browser/platform updates
+
+Security
+- Login required for all users; HTTPS encryption for all communications
+- Role-based permissions for owner, IT admin, secretary, and customers
+- Automatic account lockout after repeated failed login attempts
+- Secure password reset process for forgotten credentials
+
+Functional Requirements
+- The system will validate user credentials during login
+- The system will allow customers to schedule, cancel, and modify driving lessons
+- The system will track which driver, vehicle, and time slot is assigned to each lesson
+- The system will allow customers to select training packages during registration
+- The system will store customer information, payment details, and pickup/drop-off locations.
+- The system will provide online classes and practice tests with scores and statuses
+- The system will allow IT admins to manage user accounts and permissions
+- The system will generate activity reports showing who created, canceled, or modified records.
+- The system will receive DMV updates and notify relevant users
+- The system will allow printing or downloading reports in Excel format
+
+User Interface
+- Accessible via web browsers on desktops, laptops, tablets, and mobile phones
+- Customer interface:
+     - Register and log in
+     - View/modify lesson schedule
+     - Take online practice tests
+     - View progress and results
+     - Update personal info
+-Staff Interface:
+     - Schedule lessons for customers
+     - View and modify customer records
+     - Manage packages and availability
+- IT Admin Interface:
+     - Manage all user accounts
+     - Reset passwords
+     - Block/ unblock accounts
+-Management Interface:
+     - Generate reports
+     - Monitor performance metrics
+
+Assumptions
+- Customers have access to an Internet connection and compatible device
+- All employees are trained in using the system
+- DMV provides timely updates in a compatible format for integration
+- Payment processing will be handled securely within the system or through a trusted third party
+
+Limitations
+- Offline access will be limited to viewing previously downloaded data – no offline modifications to avoid data conflicts
+- Customization of packages will be limited to enabling/ disabling
+- Dependent on DMV cooperation for content updates
+- Limited by budget and timeline as outlined in project schedule
